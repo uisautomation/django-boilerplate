@@ -1,13 +1,13 @@
-The Django Boilerplate Web App Project
+The |project| Project
 ======================================
 
-The Django Boilerplate ``webapp`` project contains top-level configuration and URL routes for
+The |project| ``webapp`` project contains top-level configuration and URL routes for
 the entire web application.
 
 Settings
 --------
 
-The Django Boilerplate ``webapp`` project ships a number of settings files.
+The |project| ``webapp`` project ships a number of settings files.
 
 .. _settings:
 

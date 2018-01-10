@@ -43,7 +43,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Django Boilerplate Webapp'
+project = '{{project_name}}'
 copyright = '2017, University of Cambridge Information Services'
 author = 'University of Cambridge Information Services'
 
@@ -109,7 +109,7 @@ html_sidebars = {
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'DjangoBoilerplateWebappdoc'
+htmlhelp_basename = '{{project_name}}docs'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -136,9 +136,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'DjangoBoilerplateWebapp.tex',
-     'Django Boilerplate Webapp Documentation',
-     'University of Cambridge Information Services', 'manual'),
+    (master_doc, '{{project_name}}.tex', '%s Documentation' % project,
+     author, 'manual'),
 ]
 
 
@@ -147,8 +146,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'djangoboilerplatewebapp',
-     'Django Boilerplate Webapp Documentation',
+    (master_doc, '{{project_name}}',
+     '%s Documentation' % project,
      [author], 1)
 ]
 
@@ -159,8 +158,17 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'DjangoBoilerplateWebapp',
-     'Django Boilerplate Webapp Documentation',
-     author, 'DjangoBoilerplateWebapp', 'One line description of project.',
+    (master_doc, '{{project_name}}',
+     '%s Documentation' % project,
+     author, '{{project_name}}', 'One line description of project.',
      'Miscellaneous'),
 ]
+
+
+rst_prolog = """
+.. |project| replace:: {0}
+.. |author| replace:: {1}
+""".format(
+project,
+author
+)

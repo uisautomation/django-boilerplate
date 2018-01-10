@@ -1,7 +1,7 @@
 Configuration
 -------------
 
-This section describes any settings which are specific to project
+This section describes any settings which are specific to |project|
 
 .. _database-config:
 

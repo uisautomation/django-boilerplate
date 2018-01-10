@@ -1,8 +1,9 @@
 # Django Boilerplate Webapp
 
-[![Build
-Status](https://travis-ci.org/uisautomation/django-boilerplate.svg?branch=master)](https://travis-ci.org/uisautomation/django-boilerplate)
-[![codecov](https://codecov.io/gh/uisautomation/django-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/uisautomation/django-boilerplate)
+This is a django startproject template for django projects in the University Information Services.
 
-Documentation for developers, including a "getting started" guide, can be found
-at https://uisautomation.github.io/django-boilerplate.
+To use it, simply execute the following command:
+
+```
+> django-admin startproject --template https://github.com/uisautomation/django-boilerplate/archive/master.zip --extension=py,md,html,txt --name=doc/Makefile name-of-project name-of-directory
+```
