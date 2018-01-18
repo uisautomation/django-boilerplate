@@ -18,8 +18,8 @@ backend by setting ``DJANGO_DB_BACKEND``.
 Default settings
 ````````````````
 
-The default settings are given in the :py:mod:`webapp.settings.base` module:
+The default settings are given in the :py:mod:`project_name.settings.base` module:
 
-.. automodule:: webapp.settings.base
+.. automodule:: project_name.settings.base
     :members:
     :member-order: bysource
