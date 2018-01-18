@@ -106,3 +106,6 @@ venv.bak/
 
 # Local configuration
 setupenv.sh
+
+# PyCharm
+.idea
