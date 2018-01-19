@@ -71,7 +71,7 @@ Django comes with a development web server which can be run via:
 
 .. code-block:: bash
 
-    $ ./manage.py runserver 0.0.0.0:8080
+    $ python manage.py runserver 0.0.0.0:8080
 
 The server should now be browsable at http://localhost:8080/.
 
@@ -96,7 +96,7 @@ Running a development server within the container
 `````````````````````````````````````````````````
 
 There is a `docker-compose <https://docs.docker.com/compose/>`_ file at the
-top-level of the webapp repository which contains configuration allowing the
+top-level of the project_name repository which contains configuration allowing the
 application container to be launched in a development mode. In this mode the
 application repository is mounted **read-only** as a volume within the container
 over the top of the application code so changes are reflected within the
@@ -119,7 +119,7 @@ To run the development server:
 
     $ docker-compose up devserver
 
-This makes use of the :py:class:`webapp.settings.developer` settings,
+This makes use of the :py:class:`project_name.settings.developer` settings,
 launches a PostgreSQL container for the development server and a `MailHog
 <https://github.com/mailhog/MailHog>`_ server to monitor outgoing email. The web
 app is available at http://localhost:8080/ and the MailHog instance at
