@@ -16,7 +16,10 @@
 #
 import os
 import sys
+import django
+
 sys.path.insert(0, os.path.abspath('..'))
+django.setup()
 
 
 # -- General configuration ------------------------------------------------
@@ -169,6 +172,6 @@ rst_prolog = """
 .. |project| replace:: {0}
 .. |author| replace:: {1}
 """.format(
-project,
-author
+    project,
+    author
 )
