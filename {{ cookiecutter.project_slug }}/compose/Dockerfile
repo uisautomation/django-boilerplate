@@ -11,10 +11,13 @@ RUN pip install -r ./requirements_developer.txt
 # The {{ cookiecutter.project_name }} source will be mounted here as a volume
 VOLUME /usr/src/app
 
+# Copy startup script
+ADD ./compose/start-devserver.sh ./compose/wait-for-it.sh /tmp/
+
 # By default, use the Django development server to serve the application and use
 # developer-specific settings.
 #
 # *DO NOT DEPLOY THIS TO PRODUCTION*
 ENV DJANGO_SETTINGS_MODULE {{ cookiecutter.project_module }}.settings_developer
-ENTRYPOINT ["python", "manage.py"]
-CMD ["runserver", "0.0.0.0:8080"]
+ENTRYPOINT ["/tmp/wait-for-it.sh", "{{ cookiecutter.project_slug }}-db:5432", "--"]
+CMD ["/tmp/start-devserver.sh"]

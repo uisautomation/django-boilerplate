@@ -10,7 +10,7 @@ services:
     ports:
       - "8080:8080"
     depends_on:
-      - "db"
+      - "{{ cookiecutter.project_slug }}-db"
       - "mailhog"
     # For devserver, mount the local directory inside the container as a volume
     # to allow local changes to be reflected without having to re-build the
@@ -43,7 +43,7 @@ services:
   shell:
     <<: *devserver
     command: ["shell"]
-  db:
+  {{ cookiecutter.project_slug }}-db:
     image: postgres:{{ cookiecutter.postgresql_version }}
     env_file:
       - compose/base.env
