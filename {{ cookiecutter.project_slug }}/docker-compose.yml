@@ -11,7 +11,7 @@ services:
       - "8080:8080"
     depends_on:
       - "db"
-      - "debugsmtp"
+      - "mailhog"
     # For devserver, mount the local directory inside the container as a volume
     # to allow local changes to be reflected without having to re-build the
     # container.
@@ -47,7 +47,7 @@ services:
     image: postgres
     env_file:
       - compose/base.env
-  debugsmtp:
+  mailhog:
     image: mailhog/mailhog
     ports:
       - "8025:8025"

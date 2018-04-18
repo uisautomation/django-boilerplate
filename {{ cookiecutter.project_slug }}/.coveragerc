@@ -3,5 +3,6 @@ omit=
 	setup.py
 	manage.py
 	*/test/*
-	project_name/settings/*
-	project_name/wsgi.py
+	*/tests/*
+	{{ cookiecutter.project_module }}/settings/*
+	{{ cookiecutter.project_module }}/wsgi.py

@@ -41,7 +41,7 @@ MIDDLEWARE = [
 ]
 
 #: Root URL patterns
-ROOT_URLCONF = 'project_name.urls'
+ROOT_URLCONF = '{{ cookiecutter.project_module }}.urls'
 
 #: Template loading
 TEMPLATES = [
@@ -61,7 +61,7 @@ TEMPLATES = [
 ]
 
 #: WSGI
-WSGI_APPLICATION = 'project_name.wsgi.application'
+WSGI_APPLICATION = '{{ cookiecutter.project_module }}.wsgi.application'
 
 
 #: Database configuration. The default settings allow configuration of the database from

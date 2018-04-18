@@ -1,7 +1,7 @@
 """
-The :py:mod:`project_name.settings_testsuite` module contains settings which are
-specific to the test suite environment. The default ``tox`` test environment
-uses this settings module when running the test suite.
+The :py:mod:`{{ cookiecutter.project_module }}.settings_testsuite` module contains settings which are
+specific to the test suite environment. The default ``tox`` test environment uses this settings
+module when running the test suite.
 
 """
 import copy
@@ -14,7 +14,7 @@ from .base import *  # noqa: F401, F403
 
 #: The default test runner is changed to one which captures stdout and stderr
 #: when running tests.
-TEST_RUNNER = 'project_name.test.runner.BufferedDiscoverRunner'
+TEST_RUNNER = '{{ cookiecutter.project_module }}.test.runner.BufferedDiscoverRunner'
 
 #: Static files are collected into a directory determined by the tox
 #: configuration. See the tox.ini file.

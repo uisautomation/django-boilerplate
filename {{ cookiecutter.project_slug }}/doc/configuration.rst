@@ -18,8 +18,9 @@ backend by setting ``DJANGO_DB_BACKEND``.
 Default settings
 ````````````````
 
-The default settings are given in the :py:mod:`project_name.settings.base` module:
+The default settings are given in the
+:py:mod:`{{ cookiecutter.project_module }}.settings.base` module:
 
-.. automodule:: project_name.settings.base
+.. automodule:: {{ cookiecutter.project_module }}.settings.base
     :members:
     :member-order: bysource
