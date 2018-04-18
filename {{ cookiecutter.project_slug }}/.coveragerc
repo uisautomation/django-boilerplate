@@ -1,8 +1,10 @@
 [run]
 omit=
+	.tox/*
 	setup.py
 	manage.py
 	*/test/*
 	*/tests/*
 	{{ cookiecutter.project_module }}/settings/*
 	{{ cookiecutter.project_module }}/wsgi.py
+	.tox/
