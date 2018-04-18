@@ -44,9 +44,12 @@ services:
     <<: *devserver
     command: ["shell"]
   db:
-    image: postgres
+    image: postgres:{{ cookiecutter.postgresql_version }}
     env_file:
       - compose/base.env
+    volumes:
+      - postgres_data_local:/var/lib/postgresql/data
+      - postgres_backup_local:/backups
   mailhog:
     image: mailhog/mailhog
     ports:
@@ -56,3 +59,7 @@ volumes:
   # A persistent volume for tox to store its stuff. This allows caching of
   # virtualenvs between runs.
   tox-data:
+
+  # Volumes for postgres to store DBs
+  postgres_data_local: {}
+  postgres_backup_local: {}
