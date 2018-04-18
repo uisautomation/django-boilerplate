@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'automationcommon',
     'ucamwebauth',
 
+    '{{ cookiecutter.application_module }}',
 ]
 
 #: Installed middleware
