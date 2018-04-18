@@ -1,1 +1,7 @@
+# Python caches
+*.pyc
+__pycach__
 
+# Test suite files
+.pytest_cache/
+.tox
