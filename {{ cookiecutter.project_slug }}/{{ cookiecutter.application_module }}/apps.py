@@ -6,8 +6,9 @@ from . import defaultsettings
 
 class Config(AppConfig):
     """Configuration for {{ cookiecutter.application_name }} application."""
-    #: The short name for this application.
-    name = '{{ cookiecutter.application_slug }}'
+    #: The short name for this application. This should be the Python module name since Django uses
+    #: this to import things.
+    name = '{{ cookiecutter.application_module }}'
 
     #: The human-readable verbose name for this application.
     verbose_name = '{{ cookiecutter.application_slug }}'
