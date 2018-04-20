@@ -24,6 +24,6 @@ urlpatterns = [
     path('status', automationcommon.views.status, name='status'),
     path('', include(
         '{{ cookiecutter.application_module }}.urls',
-        namespace='{{ cookiecutter.application_slug }}'
+        namespace='{{ cookiecutter.application_module }}'
     )),
 ]
