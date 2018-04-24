@@ -5,8 +5,8 @@ FROM python:3.6
 WORKDIR /usr/src/app
 
 # Install any explicit requirements
-ADD requirements*.txt ./
-RUN pip install -r ./requirements_developer.txt
+ADD requirements/*.txt ./requirements/
+RUN pip install -r ./requirements/developer.txt
 
 # The {{ cookiecutter.project_name }} source will be mounted here as a volume
 VOLUME /usr/src/app
