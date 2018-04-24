@@ -81,8 +81,8 @@ http://localhost:8025/.
 
 .. note::
 
-    If the ``requirements.txt`` file is modified, you'll need to re-build the
-    container image via ``docker-compose build``.
+    If the ``requirements/*.txt`` files are modified, you'll need to re-build
+    the container image via ``docker-compose build``.
 
 Occasionally, it is useful to get an interactive Python shell which is set up to
 be able to import the application code and to make database queries, etc. You
