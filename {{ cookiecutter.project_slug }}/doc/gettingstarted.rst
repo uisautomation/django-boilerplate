@@ -76,7 +76,7 @@ This makes use of the
 :py:class:`{{ cookiecutter.project_module }}.settings.developer` settings,
 launches a PostgreSQL container for the development server and a `MailHog
 <https://github.com/mailhog/MailHog>`_ server to monitor outgoing email. The web
-app is available at http://localhost:8080/ and the MailHog instance at
+app is available at http://localhost:8000/ and the MailHog instance at
 http://localhost:8025/.
 
 .. note::

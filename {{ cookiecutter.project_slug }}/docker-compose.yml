@@ -6,9 +6,9 @@ services:
       context: .
       dockerfile: compose/Dockerfile
     expose:
-      - "8080"
+      - "8000"
     ports:
-      - "8080:8080"
+      - "8000:8000"
     depends_on:
       - "{{ cookiecutter.project_slug }}-db"
       - "mailhog"
