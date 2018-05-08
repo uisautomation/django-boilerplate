@@ -25,7 +25,7 @@ ADD . .
 # DJANGO_DB_ENGINE, DJANGO_DB_HOST, DJANGO_DB_PORT, DJANGO_DB_USER
 EXPOSE 8000
 ENV \
-	DJANGO_SETTINGS_MODULE=smswebapp.settings.docker \
+	DJANGO_SETTINGS_MODULE={{ cookiecutter.project_module }}.settings.docker \
 	PORT=8000
 
 # Use gunicorn as a web-server after running migration command

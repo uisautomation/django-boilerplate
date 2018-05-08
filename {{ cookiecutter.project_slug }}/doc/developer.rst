@@ -16,13 +16,13 @@ Run the test suite
 
 The `tox <https://tox.readthedocs.io/>`_ automation tool is used to run tests
 inside their own virtualenv. This way we can be sure that we know which packages
-are required to run the tests. By default tests are run in a sqlite database
-within a per-environment temporary directory. Other databases can be used by
-setting the ``DJANGO_DB_...`` environment variables. See :any:`database-config`.
+are required to run the tests. By default tests are run in a Postgres database
+created by docker-compose. Other databases can be used by setting the
+``DJANGO_DB_...`` environment variables. See :any:`database-config`.
 
 .. code-block:: bash
 
-    $ tox
+    $ ./tox.sh
 
 By default, ``tox`` will run the test suite using the version of Python used
 when we deploy and will compile a local version of the documentation. The ``-e``
@@ -31,14 +31,7 @@ build only the documentation:
 
 .. code-block:: bash
 
-    $ tox -e doc
-
-.. note::
-
-    The Travis CI job runs tox configured with a PostgreSQL database to match
-    that deployed in production. To replicate this, either run a PostgreSQL
-    instance on the local machine, use the Google Cloud SQL proxy or :any:`run
-    the tests via docker-compose <docker-tox>`.
+    $ ./tox.sh -e doc
 
 .. _toxenvs:
 
@@ -71,7 +64,7 @@ Django comes with a development web server which can be run via:
 
 .. code-block:: bash
 
-    $ python manage.py runserver 0.0.0.0:8000
+    $ ./compose.sh development
 
 The server should now be browsable at http://localhost:8000/.
 
@@ -160,7 +153,7 @@ To run the flake8 tests manually, specify the tox environment:
 
 .. code:: bash
 
-    $ tox -e flake8
+    $ ./tox.sh -e flake8
 
 Documentation
 `````````````

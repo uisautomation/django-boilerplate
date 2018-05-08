@@ -34,12 +34,18 @@ wOq24EIbX5LquL9w+uvnfXw=
 
 DEBUG = True
 
-INSTALLED_APPS = INSTALLED_APPS + [  # noqa: F405
-    'debug_toolbar',
-]
+# Configure the django debug toolbar if it is installed.
+try:
+    import debug_toolbar  # noqa: F401
 
-MIDDLEWARE = MIDDLEWARE + [  # noqa: F405
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
-]
+    INSTALLED_APPS = INSTALLED_APPS + [  # noqa: F405
+        'debug_toolbar',
+    ]
+
+    MIDDLEWARE = MIDDLEWARE + [  # noqa: F405
+        'debug_toolbar.middleware.DebugToolbarMiddleware',
+    ]
+except ImportError:
+    pass
 
 STATIC_URL = '/static/'
