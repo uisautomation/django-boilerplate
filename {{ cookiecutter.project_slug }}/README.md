@@ -1,9 +1,23 @@
-# Django Boilerplate project_name
+# Django Boilerplate {{ cookiecutter.project_name }}
 
-This is a django startproject template for django projects in the University Information Services.
+**THIS README NEEDS COMPLETING**
 
-To use it, simply execute the following command:
+This repository contains [...] which does [...] in order to [...].
 
-```
-> django-admin startproject --template https://github.com/uisautomation/django-boilerplate/archive/master.zip --extension=py,md,html,txt name-of-project name-of-directory
-```
+## Documentation
+
+The documentation is available from [...].
+
+## Developer quickstart
+
+1. Clone this repository.
+2. ????
+3. Profit
+
+## CircleCI configuration
+
+[ADD DETAILS HERE ON WHAT CONFIGURATION IS REQUIRED FOR CIRCLECI/OTHER CI/CD.]
+
+## Copyright License
+
+See the [LICENSE](LICENSE) file for details.
