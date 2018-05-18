@@ -31,7 +31,7 @@ Cookie cutter will ask you for the following values:
 * **application_module**: Name of the Python module containing the first
     application for the project. By default, this is generated from the project
     name.  E.g., for the project name above,
-    "uis_frobnication_requester_project".
+    "uis_frobnication_requester".
 * **secret_key**: Secret key used in development. By default this is a long
     string made unique by prepending the **project_slug** value.
 * **postgresql_version**: Version of PostgreSQL which should be used for running
