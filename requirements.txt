@@ -1,18 +1,15 @@
-# Requirements for the project_name itself
-django>=2.0
-psycopg2
-# explicitly specify django-automationcommon's git repo since changes in
-# automationcommon tend to be "ad hoc" and may need testing here without a
-# corresponding pypi release. Recall that git branched may be explicitly given
-# in the VCS URL.
-git+https://github.com/uisautomation/django-automationcommon@master#egg=django-automationcommon
-django-ucamwebauth>=1.4.5
+cookiecutter==1.6.0
+sh==1.12.14
+binaryornot==0.4.4
 
-# For an improved manage.py shell experience
-ipython
+# Code quality
+# ------------------------------------------------------------------------------
+flake8==3.5.0
+pycodestyle==2.3.1
+pyflakes==1.6.0
 
-# So that tests may be run within the container
-tox
-
-# Serving
-gunicorn
+# Testing
+# ------------------------------------------------------------------------------
+tox==3.0.0
+pytest==3.5.0
+pytest-cookies==0.3.0
