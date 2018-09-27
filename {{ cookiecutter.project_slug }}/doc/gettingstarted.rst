@@ -8,7 +8,7 @@ machine configured. More information on development is found in the
 Fork the upstream repository
 ````````````````````````````
 
-The repository at https://github.com/uisautomation/django-boilerplate is configured to
+The repository at https://github.com/uisautomation/{{ cookiecutter.project_slug }} is configured to
 disallow pushing to master. You'll need to *fork* the repository into your
 personal account and then open pull requests from your personal repository into
 the main repository.
