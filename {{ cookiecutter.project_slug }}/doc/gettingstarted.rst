@@ -19,7 +19,7 @@ Set up cloud integrations
 In order to make sure any branches you develop in your fork are tested, visit
 the following cloud tool sites, sign in with GitHub and add your new fork:
 
-1. Add your repository to  `Travis CI <https://travis-ci.org/>`_.
+1. Add your repository to  `Circle CI <https://circleci.com/>`_.
 2. Go to `Codecov <https://codecov.io/>`_ and add your fork as a watched repo.
    Make sure to enable the Codecov integration.
 

@@ -103,13 +103,13 @@ branches in the main repository.
 Unit tests
 ``````````
 
-The project is set up on `Travis CI <https://travis-ci.org/>`_ to automatically
+The project is set up on `Circle CI <https://circleci.com/>`_ to automatically
 run unit tests and build documentation on each commit to a branch and on each
 pull request.
 
 .. note::
 
-    By logging into Travis CI via GitHub, you can enable Travis CI for your
+    By logging into Circle CI via GitHub, you can enable Circle CI for your
     personal fork. This is **highly recommended** as you'll get rapid feedback
     via email if you push a commit to a branch which does not pass the test
     suite.
@@ -132,12 +132,6 @@ documentation is deployed to https://uisautomation.github.io/{{ cookiecutter.pro
 GitHub pages. The `UIS robot <https://github.com/bb9e/>`_ machine account's
 personal token is set up in Travis via the ``GITHUB_TOKEN`` environment
 variable.
-
-.. seealso::
-
-    Travis CI's `documentation
-    <https://docs.travis-ci.com/user/deployment/pages/>`_ on deploying to GitHub
-    pages.
 
 Code-style
 ``````````
