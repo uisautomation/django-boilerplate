@@ -18,7 +18,6 @@ from django.http import HttpResponse
 from django.urls import path, include
 
 import automationcommon.views
-from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
