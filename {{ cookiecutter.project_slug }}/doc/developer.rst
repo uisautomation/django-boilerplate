@@ -40,8 +40,8 @@ tox environments
 
 The following tox environments are available.
 
-py36
-    Run by default. Launch the test suite under Python 3.6. Generate a
+py3
+    Run by default. Launch the test suite under Python 3. Generate a
     code-coverage report and display a summary coverage report.
 
 doc
@@ -91,7 +91,7 @@ This section provides a brief outline of cloud infrastructure for development.
 Source control
 ``````````````
 
-The source code is hosted on GitHub at https://github.com/uisautomation/django-boilerplate.
+The source code is hosted on GitHub at https://github.com/uisautomation/{{ cookiecutter.project_slug }}.
 The repository has ``master`` set up to be writeable only via pull request. It
 is intended that local development happens in personal forks and is merged via
 pull request. The main rationale for this is a) it guards against accidentally
@@ -103,13 +103,13 @@ branches in the main repository.
 Unit tests
 ``````````
 
-The project is set up on `Travis CI <https://travis-ci.org/>`_ to automatically
+The project is set up on `Circle CI <https://circleci.com/>`_ to automatically
 run unit tests and build documentation on each commit to a branch and on each
 pull request.
 
 .. note::
 
-    By logging into Travis CI via GitHub, you can enable Travis CI for your
+    By logging into Circle CI via GitHub, you can enable Circle CI for your
     personal fork. This is **highly recommended** as you'll get rapid feedback
     via email if you push a commit to a branch which does not pass the test
     suite.
@@ -122,22 +122,16 @@ Code-coverage
 `````````````
 
 Going to `CodeCov <https://codecov.io/>`_, logging in with GitHub and adding the
-``django-boilerplate`` repository will start code coverage reporting on pull-requests.
+``{{ cookiecutter.project_slug }}`` repository will start code coverage reporting on pull-requests.
 
 Documentation
 `````````````
 
 Travis CI has been set up so that when the master branch is built, the
-documentation is deployed to https://uisautomation.github.io/django-boilerplate via
+documentation is deployed to https://uisautomation.github.io/{{ cookiecutter.project_slug }} via
 GitHub pages. The `UIS robot <https://github.com/bb9e/>`_ machine account's
 personal token is set up in Travis via the ``GITHUB_TOKEN`` environment
 variable.
-
-.. seealso::
-
-    Travis CI's `documentation
-    <https://docs.travis-ci.com/user/deployment/pages/>`_ on deploying to GitHub
-    pages.
 
 Code-style
 ``````````
@@ -159,4 +153,4 @@ Documentation
 `````````````
 
 This documentation is re-built on each commit to master by Travis and posted to
-GitHub pages at https://uisautomation.github.io/django-boilerplate/.
+GitHub pages at https://uisautomation.github.io/{{ cookiecutter.project_slug }}/.

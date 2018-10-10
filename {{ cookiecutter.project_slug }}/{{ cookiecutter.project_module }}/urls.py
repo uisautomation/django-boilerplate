@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.http import HttpResponse
 from django.urls import path, include
 
 import automationcommon.views
@@ -22,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('ucamwebauth.urls')),
     path('status', automationcommon.views.status, name='status'),
+    path('healthz', lambda request: HttpResponse('ok', content_type="text/plain"), name='healthz'),
     path('', include(
         '{{ cookiecutter.application_module }}.urls',
         namespace='{{ cookiecutter.application_module }}'
