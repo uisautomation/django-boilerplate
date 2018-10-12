@@ -8,8 +8,8 @@ services:
     env_file:
       - base.env
     volumes:
-      - {{ cookiecutter.project_slug }}-postgres-data-local:/var/lib/postgresql/data
-      - {{ cookiecutter.project_slug }}-postgres-backup-local:/backups
+      - postgres-data-local:/var/lib/postgresql/data
+      - postgres-backup-local:/backups
 
   # Debug SMTP provider
   mailhog:
@@ -19,5 +19,5 @@ services:
 
 volumes:
   # Persistent volumes for postgres database data
-  {{ cookiecutter.project_slug }}-postgres-data-local:
-  {{ cookiecutter.project_slug }}-postgres-backup-local:
+  postgres-data-local:
+  postgres-backup-local:
