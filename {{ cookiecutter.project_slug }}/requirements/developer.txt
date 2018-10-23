@@ -5,3 +5,6 @@
 
 # Django debugging
 django-debug-toolbar
+
+# docker compatible debugger
+pudb
