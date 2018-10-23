@@ -26,6 +26,12 @@ services:
       - "{{ cookiecutter.project_slug }}-db"
       - "mailhog"
 
+    # Options stdin_open and tty are set to allow you to attach to the container for the purposes
+    # of debugging.
+    # See https://blog.lucasferreira.org/howto/2017/06/03/running-pdb-with-docker-and-gunicorn.html
+    stdin_open: true
+    tty: true
+
     # For development, mount the local directory inside the container as a
     # volume to allow local changes to be reflected without having to re-build
     # the container.
@@ -34,3 +40,10 @@ services:
         source: ../
         target: /usr/src/app
         read_only: true
+      - type: volume
+        source: pudb-config
+        target: /root/.config/pudb
+
+volumes:
+  # A persistent volume to preserve the pudb configuration.
+  pudb-config:
