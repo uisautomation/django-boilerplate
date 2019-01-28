@@ -32,6 +32,9 @@ INSTALLED_APPS = [
     'drf_yasg',
     'rest_framework',
     'rest_framework.authtoken',
+{% if cookiecutter.use_ucamlookup == "YES" %}
+    'ucamlookup',
+{% endif %}
 
     '{{ cookiecutter.application_module }}',
 ]

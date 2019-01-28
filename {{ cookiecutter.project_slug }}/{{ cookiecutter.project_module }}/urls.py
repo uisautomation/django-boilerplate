@@ -53,6 +53,11 @@ urlpatterns = [
         namespace='{{ cookiecutter.application_module }}'
     )),
 
+{% if cookiecutter.use_ucamlookup == "YES" %}
+    # lookup/ibis urls
+    path('ucamlookup/', include('ucamlookup.urls')),
+{% endif %}
+
     # API documentation
     re_path(
         r'^api/swagger(?P<format>\.json|\.yaml)$',

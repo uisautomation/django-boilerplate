@@ -36,6 +36,9 @@ Cookie cutter will ask you for the following values:
     string made unique by prepending the **project_slug** value.
 * **postgresql_version**: Version of PostgreSQL which should be used for running
     tests.
+* **use_ucamlookup**: Whether the django-ucamlookup module should be used to
+    auto-populate user's display names. (This requires extra configuration if
+    the application is to be used outside of the CUDN.)
 
 ### "Slug" versus "module"
 

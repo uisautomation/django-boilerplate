@@ -8,5 +8,6 @@
     "secret_key": "{{ cookiecutter.project_slug }}-fuas3saiyeib8eiVaezohdoo7jee4ro6leVieCahtaiboocioguezu8iafi2Oote",
     "postgresql_version": [
         "9.6"
-    ]
+    ],
+    "use_ucamlookup": ["YES", "NO"]
 }

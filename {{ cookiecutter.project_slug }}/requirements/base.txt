@@ -7,6 +7,9 @@ psycopg2-binary
 # in the VCS URL.
 git+https://github.com/uisautomation/django-automationcommon@master#egg=django-automationcommon
 django-ucamwebauth>=1.4.5
+{% if cookiecutter.use_ucamlookup == "YES" %}
+django-ucamlookup>=1.9.5
+{% endif %}
 
 # API-related Django packages
 djangorestframework
