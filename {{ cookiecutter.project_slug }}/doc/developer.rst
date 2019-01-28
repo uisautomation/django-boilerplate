@@ -91,15 +91,13 @@ This section provides a brief outline of cloud infrastructure for development.
 Source control
 ``````````````
 
-The source code is hosted on GitHub at https://github.com/uisautomation/{{ cookiecutter.project_slug }}.
-The repository has ``master`` set up to be writeable only via pull request. It
-is intended that local development happens in personal forks and is merged via
-pull request. The main rationale for this is a) it guards against accidentally
-``git push``-ing the wrong branch and b) it reduces the number of "dangling"
-branches in the main repository.
-
-.. _travisci:
-
+The source code is hosted on GitHub at https://github.com/uisautomation/ or
+GitLab at https://gitlab.developers.cam.ac.uk/uis/devops.  The repository has
+``master`` set up to be writeable only via pull request. It is intended that
+local development happens in personal forks and is merged via pull request. The
+main rationale for this is a) it guards against accidentally ``git push``-ing
+the wrong branch and b) it reduces the number of "dangling" branches in the main
+repository.
 Unit tests
 ``````````
 

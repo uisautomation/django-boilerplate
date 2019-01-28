@@ -6,8 +6,8 @@ This repository contains [...] which does [...] in order to [...].
 
 ## Documentation
 
-The project has [detailed documentation](https://uisautomation.github.io/[...]/) for
-developers, including a "getting started" guide.
+The project has detailed documentation for developers, including a "getting
+started" guide. See below for information on building the documentation.
 
 ## Developer quickstart
 
