@@ -9,5 +9,5 @@
     "postgresql_version": [
         "9.6"
     ],
-    "use_ucamlookup": ["YES", "NO"]
+    "use_ucamlookup": ["NO", "YES"]
 }
