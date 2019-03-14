@@ -1,5 +1,7 @@
 # Django Boilerplate
 
+> This repository has been moved to *https://gitlab.developers.cam.ac.uk/uis/devops/webapp-boilerplate*
+
 This repository contains a
 [cookiecutter](https://github.com/audreyr/cookiecutter) template for Django
 projects created by the Automation Group.
